@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Stargazers Rewind",
+  "version": "0.4.0",
+  "description": "Reconstructs the broadest available GitHub stargazer history from public WatchEvent archives, using immutable repository IDs across renames/transfers.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://api.github.com/*",
+    "https://play.clickhouse.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "GitHub Stargazers Rewind",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*/stargazers*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
