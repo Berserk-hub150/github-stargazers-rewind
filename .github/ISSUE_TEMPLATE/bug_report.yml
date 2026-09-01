@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible problem with the extension
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Public repository used for reproduction
+      placeholder: owner/repository
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Console errors, screenshots, or archive-source diagnostics. Do not include secrets.
