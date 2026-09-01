@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Stargazers Rewind</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>GitHub Stargazers Rewind</h1>
+    <p id="repo" class="muted">Apri una repository GitHub.</p>
+    <div class="card">
+      <div class="stat"><span>Utenti ricostruiti</span><strong id="count">—</strong></div>
+      <div class="stat"><span>Star GitHub</span><strong id="stars">—</strong></div>
+      <p id="updated" class="muted small"></p>
+    </div>
+    <button id="refresh">Ricostruisci adesso</button>
+    <button id="clear" class="secondary">Cancella cache</button>
+    <p id="status" class="status"></p>
+    <p class="fineprint">Usa più archivi WatchEvent e il repo_id immutabile per massimizzare la copertura anche dopo rename/transfer. La lista resta una ricostruzione storica, non la membership live.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
